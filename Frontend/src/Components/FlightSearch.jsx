@@ -18,7 +18,8 @@ const FlightSearch = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/flights?source=${source}&destination=${destination}&date=${date}`
+        // `http://localhost:5000/api/flights?source=${source}&destination=${destination}&date=${date}`
+        `https://flightapis.onrender.com/api/flights?source=${source}&destination=${destination}&date=${date}`
       );
       setFlights(response.data);
     } catch (err) {
